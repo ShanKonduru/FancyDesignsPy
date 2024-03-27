@@ -25,10 +25,10 @@ for i in range(5000):
     h += 0.005
     color(c)
     up()
-    draw(90, i)
-    # draw(270, i)
+    # draw(90, i)
+    draw(270, i)
     down()
-    draw(180, i)
-    # draw(360, i)
+    # draw(180, i)
+    draw(360, i)
     time.sleep(0.05)  # Slow down the execution
     
