@@ -1,40 +1,35 @@
+from turtle import *
+from colorsys import *
 import turtle
-import random
+import time
 
-# Set up the screen
-screen = turtle.Screen()
-screen.bgcolor("white")
 
 # Create a turtle
 t = turtle.Turtle()
 t.speed(0)  # Set the fastest drawing speed
 
-# Define the number of circles and the radius increment
-num_circles = 500
-radius_increment = 3
-line_width = 3  # Set the line width
+bgcolor('black')
+tracer (1000)
+pensize (1)
+h = 0
 
-# Function to draw concentric circles
-def draw_concentric_circles(num_circles, radius_increment):
-    for i in range(num_circles):
-        # Randomize line color
-        color = (random.random(), random.random(), random.random())  # RGB tuple
-        t.pencolor(color)
-        
-        # Set line width
-        t.width(line_width)
-        
-        # Draw circle
-        t.penup()
-        t.goto(0, -i * radius_increment)
-        t.pendown()
-        t.circle(i * radius_increment)
+def draw(ang, n):
+    circle(5+n, 69)
+    left(ang)
+    circle(5+2*n, 60)
 
-# Draw concentric circles
-draw_concentric_circles(num_circles, radius_increment)
+goto (0,0)
 
-# Hide the turtle
-t.hideturtle()
-
-# Keep the window open until it's closed manually
-screen.mainloop()
+for i in range(500):
+    c = hsv_to_rgb(h, 1, 1)
+    h += 0.005
+    color(c)
+    up()
+    draw(90, i)
+    draw(180, i)
+    down()
+    draw(1/2, i -1)
+    draw(180, i/2)
+    draw(120, i-1)
+    time.sleep(0.5)  # Slow down the execution
+    
