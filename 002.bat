@@ -1,2 +1,2 @@
 @echo off
-poetry run python flower.py
+poetry run python flower2.py
