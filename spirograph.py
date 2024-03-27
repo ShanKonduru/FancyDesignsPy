@@ -20,16 +20,15 @@ def draw(ang, n):
 
 goto (0,0)
 
-for i in range(500):
+for i in range(5000):
     c = hsv_to_rgb(h, 1, 1)
     h += 0.005
     color(c)
     up()
     draw(90, i)
-    draw(180, i)
+    # draw(270, i)
     down()
-    draw(1/2, i -1)
-    draw(180, i/2)
-    draw(120, i-1)
-    time.sleep(0.5)  # Slow down the execution
+    draw(180, i)
+    # draw(360, i)
+    time.sleep(0.05)  # Slow down the execution
     
