@@ -9,6 +9,7 @@ class LogisticMapPlotter:
 
     def plot(self, iterations=100):
         for i in range(1, iterations + 1):
+            output_filename = "./output/" +  str(i) + "_Logistic_Map.png"
             x_a = 1 - self.x
             Data = np.multiply(self.x, self.r)
             Data = np.multiply(Data, x_a)
@@ -19,7 +20,7 @@ class LogisticMapPlotter:
             plt.xlabel('r-Rate')
 
             plt.scatter(self.r, Data, s=0.1, c='k')
-            plt.savefig(str(i) + " Logistic Map.png", dpi=300)
+            plt.savefig(output_filename, dpi=300)
             plt.clf()
 
 # Example usage:
