@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 class ComplexLogisticMap3DPlotter:
-    def __init__(self, Many=500, iterations=100):
+    def __init__(self, Many=5000, iterations=100):
         self.Many = Many
         self.iterations = iterations
         self.r = np.linspace(-2, 2, self.Many)
