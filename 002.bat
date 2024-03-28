@@ -4,6 +4,7 @@ if '%1'=='2' goto TWO
 if '%1'=='3' goto THREE
 if '%1'=='4' goto FOUR
 if '%1'=='5' goto FIVE
+if '%1'=='6' goto SIX
 goto USAGE
 
 :ONE
@@ -24,6 +25,10 @@ goto END
 
 :FIVE
 poetry run python spiralweb.py
+goto END
+
+:SIX
+poetry run python bifurcationdiagram.py
 goto END
 
 :USAGE
