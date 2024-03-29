@@ -7,6 +7,8 @@ if '%1'=='5' goto FIVE
 if '%1'=='6' goto SIX
 if '%1'=='7' goto SEVEN
 if '%1'=='8' goto EIGHT
+if '%1'=='9' goto NINE
+
 goto USAGE
 
 :ONE
@@ -41,6 +43,10 @@ goto END
 poetry run python ComplexNumbers3D.py
 goto END
 
+:NINE
+poetry run python flower3.py
+goto END
+
 
 :USAGE
 echo Usage:
@@ -52,6 +58,7 @@ echo "002 5 => to Run spiralweb design"
 echo "002 6 => to Run bifurcationdiagram design"
 echo "002 7 => to Run 3dbifurcation design"
 echo "002 8 => to Run ComplexNumbers3D design"
+echo "002 9 => to Run flower3 design"
 goto END
 
 :END
